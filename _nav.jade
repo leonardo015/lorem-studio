@@ -1,0 +1,60 @@
+#nav
+	ul.left
+		li
+			a(href="#") Hello
+		li
+			a(href="#") About
+		li
+			a(href="#") Services
+		li
+			a(href="#") Works
+		li
+			a(href="#") Pricing
+
+	a(href="#").logo
+
+	ul.right
+		li
+			a(href="#") Facts
+		li
+			a(href="#") Clients
+		li
+			a(href="#") Words
+		li
+			a(href="#") Blog
+		li
+			a(href="#") Contact
+
+#nav-mobile
+	a(href="#").logo
+	span.current-page Hello
+	ul.nav-mobile-links
+		li
+			a(href="#") Hello
+		li
+			a(href="#") About
+		li
+			a(href="#") Services
+		li
+			a(href="#") Works
+		li
+			a(href="#") Pricing
+		li
+			a(href="#") Facts
+		li
+			a(href="#") Clients
+		li
+			a(href="#") Words
+		li
+			a(href="#") Blog
+		li
+			a(href="#") Contact
+	i(class="nav-mobile-arrow icon-double-angle-down")
+	script.
+		$('.current-page, .nav-mobile-arrow').click(function(){
+			$('#nav-mobile').toggleClass('open');
+		});
+		$('a', '.nav-mobile-links').click(function(){
+			$('.current-page', '#nav-mobile').html( $(this)[0].innerText );
+			$('#nav-mobile').removeClass('open');
+		});

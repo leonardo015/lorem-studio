@@ -1,0 +1,31 @@
+#contact
+	h2 Get in <strong>touch</strong>
+	p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.
+
+	form.contact-form(onsubmit="return false")
+		input(type="text" placeholder="Full Name")
+		input(type="text" placeholder="Email")
+		input(type="text" placeholder="Website")
+		input(type="text" placeholder="7 + 8")
+		textarea(rows=5)
+		input(type="submit" value="Send now")
+
+	.contact-shortcuts
+		.shortcut.first
+			i(class="icon-envelope-alt")
+			p info@cocostudio.com
+		.shortcut
+			i(class="icon-envelope-alt")
+			p sales@cocostudio.com
+		.shortcut
+			i(class="icon-map-marker")
+			p Bukir Gadingrejo 123<br>Pasuruan Indonesia 654321
+		.shortcut
+			i(class="icon-mobile-phone")
+			p +62 - 0343 - 1234567
+		.shortcut.last
+			i(class="icon-globe")
+			p www.cocostudio.com
+
+	script.
+		$('input, textarea').placeholder();
